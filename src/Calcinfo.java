@@ -65,6 +65,7 @@ public class Calcinfo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(213, 242, 224));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,7 +80,7 @@ public class Calcinfo extends javax.swing.JFrame {
 
         jLabel_info_bin_texto.setFont(new java.awt.Font("Courier New", 0, 11)); // NOI18N
         jLabel_info_bin_texto.setText("BIN");
-        jPanel1.add(jLabel_info_bin_texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        jPanel1.add(jLabel_info_bin_texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
         jLabel_info_oct_texto.setFont(new java.awt.Font("Courier New", 0, 11)); // NOI18N
         jLabel_info_oct_texto.setText("OCT");
@@ -104,6 +105,9 @@ public class Calcinfo extends javax.swing.JFrame {
 
         jLabel_info_bin_resultado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jPanel1.add(jLabel_info_bin_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 70, -1));
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 320, 130);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -284,20 +288,8 @@ public class Calcinfo extends javax.swing.JFrame {
         });
         jPanel2.add(jButtonCalcInfo_Ocultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 130, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 140, 320, 368);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
